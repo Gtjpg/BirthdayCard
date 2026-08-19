@@ -1,0 +1,10 @@
+.auto {
+    font-family: cursive;
+    
+}
+
+.auto-container {
+    z-index: 10;
+    margin-top: -480px;
+    margin-left: 10rem;
+}

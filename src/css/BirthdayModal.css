@@ -1,0 +1,314 @@
+.birthday-overlay {
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(30,10,45,.7);
+    backdrop-filter:blur(8px);
+    z-index:999;
+  }
+  
+  .birthday-modal {
+    width:360px;
+    padding:45px 35px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    border-radius:30px;
+  
+    background:linear-gradient(
+      145deg,
+      #ff4f91,
+      #9b4dff,
+      #42d9e8
+    );
+  
+    color:white;
+  
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.35),
+      0 0 60px rgba(255,79,145,.4);
+  
+    animation:modalIn .7s cubic-bezier(.17,.89,.32,1.3);
+  }
+  
+  @keyframes modalIn {
+    0% {
+      opacity:0;
+      transform:scale(.4) rotate(-8deg);
+    }
+  
+    70% {
+      transform:scale(1.05) rotate(2deg);
+    }
+  
+    100% {
+      opacity:1;
+      transform:scale(1) rotate(0);
+    }
+  }
+  
+  
+ /* TITLE */
+
+.birthday-modal h1 {
+    margin: 25px 0 10px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #fff8df;
+    text-shadow: 0 5px 15px rgba(120, 55, 0, .25);
+  }
+  
+  .birthday-line {
+    width: 60px;
+    height: 4px;
+    margin: 15px auto;
+    border-radius: 10px;
+    background: #ffd84d;
+  }
+  
+  .birthday-modal p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0 25px;
+    color: #fff8e8;
+  }
+  
+  
+  /* CAKE */
+  
+  .birthday-circle {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 50%;
+  
+    background: rgba(255, 216, 77, .25);
+  
+    box-shadow:
+      inset 0 0 20px rgba(255, 235, 150, .3),
+      0 0 30px rgba(255, 216, 77, .45);
+  
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  .birthday-cake {
+    width: 55px;
+    height: 35px;
+    position: relative;
+  
+    border-radius: 6px 6px 12px 12px;
+    background: #fff8df;
+  
+    box-shadow: 0 5px 15px rgba(150, 70, 0, .2);
+  }
+  
+  .birthday-cake:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 12px;
+  
+    border-radius: 8px;
+    background: #ffb52e;
+  }
+  
+  .birthday-cake span {
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    left: 25px;
+    top: -25px;
+  
+    background: #fff8df;
+  }
+  
+  .birthday-cake i {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 23px;
+    top: -31px;
+  
+    border-radius: 50%;
+  
+    background: #ffd84d;
+    box-shadow: 0 0 12px #ffd84d;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  
+  /* BUTTON */
+  
+  .birthday-modal button {
+    border: 0;
+    padding: 15px 28px;
+    border-radius: 50px;
+  
+    background: #ffd84d;
+    color: #a94300;
+  
+    font-weight: 800;
+    letter-spacing: 1px;
+  
+    cursor: pointer;
+  
+    box-shadow:
+      0 8px 20px rgba(130, 55, 0, .25),
+      0 0 15px rgba(255, 216, 77, .3);
+  
+    transition: .25s;
+  }
+  
+  .birthday-modal button:hover {
+    transform: translateY(-4px) scale(1.05);
+  
+    background: #ffe477;
+  
+    box-shadow:
+      0 15px 30px rgba(130, 55, 0, .3),
+      0 0 25px rgba(255, 216, 77, .5);
+  }
+  
+  
+  /* CONFETTI */
+  
+  .modal-confetti {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    border-radius: 3px;
+  
+    animation: confetti 2s ease-in-out infinite;
+  }
+  
+  .c1 {
+    background: #ffd84d;
+    left: 12%;
+    top: 15%;
+    transform: rotate(25deg);
+  }
+  
+  .c2 {
+    background: #ff8a1f;
+    right: 15%;
+    top: 20%;
+    transform: rotate(-35deg);
+  }
+  
+  .c3 {
+    background: #fff8df;
+    left: 20%;
+    bottom: 18%;
+    transform: rotate(50deg);
+  }
+  
+  .c4 {
+    background: #ffb52e;
+    right: 12%;
+    bottom: 25%;
+    transform: rotate(-20deg);
+  }
+  
+  .c5 {
+    background: #ffd84d;
+    left: 8%;
+    top: 50%;
+    transform: rotate(70deg);
+  }
+  
+  .c6 {
+    background: #ff7a18;
+    right: 7%;
+    top: 55%;
+    transform: rotate(-50deg);
+  }
+  
+  @keyframes confetti {
+    0%, 100% {
+      transform: translateY(0) rotate(20deg);
+      opacity: .6;
+    }
+  
+    50% {
+      transform: translateY(-18px) rotate(180deg);
+      opacity: 1;
+    }
+  }
+  
+  .birthday-modal {
+    background: linear-gradient(
+      145deg,
+      #ff7a18,
+      #ff9f1c,
+      #f5b700
+    );
+  }
+
+  
+/**/
+.birthday-open-btn {
+    border: none;
+    padding: 16px 32px;
+  
+    border-radius: 50px;
+  
+    background: linear-gradient(
+      135deg,
+      #ff7a18,
+      #ffb300
+    );
+  
+    color: white;
+  
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  
+    cursor: pointer;
+  
+    box-shadow:
+      0 8px 20px rgba(255, 122, 24, .3),
+      0 0 25px rgba(255, 193, 7, .2);
+  
+    transition: .25s;
+  }
+  
+  .birthday-open-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+  
+    background: linear-gradient(
+      135deg,
+      #ff8a1f,
+      #ffd23f
+    );
+  
+    box-shadow:
+      0 12px 30px rgba(255, 122, 24, .4),
+      0 0 30px rgba(255, 210, 63, .4);
+  }
+  
+  .birthday-open-btn:active {
+    transform: scale(.96);
+  }
+  .birthday-open-btn {
+    margin-left: 150px;
+  }  
