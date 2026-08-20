@@ -1,6 +1,6 @@
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .photo {
-    width: 100%;
+    width: 500px;
     height: 500px;
     display: block;
   }
@@ -11,7 +11,7 @@
     display: block;
     z-index: 10;
     margin-top: -230px;
-    margin-left: 15.5rem;
+    margin-left: 16rem;
 
     animation: fadeIn 1s ease-in forwards;
   }
@@ -22,7 +22,7 @@
     display: block;
     z-index: 10;
     margin-top: -230px;
-    margin-left: 9rem;
+    margin-left: 10rem;
   }
 }
 
@@ -136,7 +136,7 @@
 
 .confetti-left {
   width: 400px;
-  transform: translate(80px, -185px);
+  transform: translate(110px, -185px);
 }
 
 .confetti-left svg {
@@ -166,5 +166,5 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
-  transform: translate(75px, -145px);
+  transform: translate(110px, -145px);
 }
