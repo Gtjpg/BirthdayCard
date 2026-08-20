@@ -26,7 +26,7 @@ function BirthdayModal({ onClose }) {
         <p>
           Enjoy your special day!
           <br />
-          Make a wish and enjoy every moment.
+          May your day be filled with all the love and happiness in the world. Someone as wonderful as you deserves only the best!
         </p>
 
         <button onClick={onClose}>
