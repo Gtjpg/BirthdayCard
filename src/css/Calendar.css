@@ -11,7 +11,7 @@
     display: block;
     z-index: 10;
     margin-top: -230px;
-    margin-left: 17.5rem;
+    margin-left: 15.5rem;
 
     animation: fadeIn 1s ease-in forwards;
   }
@@ -22,7 +22,7 @@
     display: block;
     z-index: 10;
     margin-top: -230px;
-    margin-left: 11rem;
+    margin-left: 9rem;
   }
 }
 
@@ -136,7 +136,7 @@
 
 .confetti-left {
   width: 400px;
-  transform: translate(128px, -185px);
+  transform: translate(80px, -185px);
 }
 
 .confetti-left svg {

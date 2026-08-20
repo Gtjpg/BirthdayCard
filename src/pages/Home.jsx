@@ -48,7 +48,7 @@ function Home() {
       </div>
 
       <div className="auto-container">
-        <span className="auto" style={{ fontSize: "25px" }}>
+        <span className="auto" style={{ fontSize: "20px" }}>
           <Typewriter
             loop={1}
             cursor
